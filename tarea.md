@@ -70,3 +70,9 @@ curl -kX DELETE https://jsonplaceholder.typicode.com/posts/1
 ```
 
 ![imagenTarea](img/delete.png)
+
+# TESTS REALIZADOS
+
+Comprobamos que todos los tests nos salgan exactamente como deben utilizando el script creado en /scripts/test.sh
+
+![imagenTarea](img/tests.png)
