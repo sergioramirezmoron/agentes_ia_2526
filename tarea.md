@@ -14,6 +14,8 @@
 - -H: Indicar que se están enviando datos JSON al servidor. Tambien puede escribirse como --header.
   > No usar -H puede derivar a que la API nos devuelva un error si no comprende lo que estamos queriendo decirle
 - -d: Enviar información al servidor, es la reduccion de "data". En resumen, los datos que se envian al servidor.
+- -i: Mostrar encabezados de respuesta. (Muestra tamaño, codigo de estado, etc...)
+- -v: Mostrar información sobre lo que va realizando la petición.
 
 ## 1. GET
 
