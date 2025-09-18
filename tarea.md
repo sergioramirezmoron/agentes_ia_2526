@@ -29,7 +29,7 @@ curl -k https://jsonplaceholder.typicode.com/posts/1
 
 ## 2. POST
 
-Envia datos para crear algo nuevo
+Envia datos para crear algo nuevo.
 
 ```bash
 curl -kX POST https://jsonplaceholder.typicode.com/posts \
@@ -41,7 +41,7 @@ curl -kX POST https://jsonplaceholder.typicode.com/posts \
 
 ## 3. PUT
 
-Actualiza algo con los nuevos datos introducidos
+Actualiza con absolutamente todos los nuevos datos introducidos.
 
 ```bash
 curl -kX PUT https://jsonplaceholder.typicode.com/posts/1 \
@@ -53,7 +53,7 @@ curl -kX PUT https://jsonplaceholder.typicode.com/posts/1 \
 
 ## 4. PATCH
 
-Actualiza solo lo solicitado
+Actualiza solo lo solicitado por el usuario.
 
 ```bash
 curl -kX PATCH https://jsonplaceholder.typicode.com/posts/1 \
@@ -65,7 +65,7 @@ curl -kX PATCH https://jsonplaceholder.typicode.com/posts/1 \
 
 ## 5. DELETE
 
-Elimina del servidor
+Elimina del servidor.
 
 ```bash
 curl -kX DELETE https://jsonplaceholder.typicode.com/posts/1
