@@ -4,7 +4,7 @@
 - Usar alguna web API REST fake para probar las posibles funcionalidades del comando CURL (https://jsonplaceholder.typicode.com)
 - Crear script llamado test. /scripts/test.sh que lance todas las posibles test del comando CURL para realizar GET, POST, DELETE, PATCH y PUT.
 
-### TAREA RESUELTA
+## TAREA RESUELTA
 
 #### OPCIONES
 
@@ -16,6 +16,18 @@
 - -d: Enviar información al servidor, es la reduccion de "data". En resumen, los datos que se envian al servidor.
 - -i: Mostrar encabezados de respuesta. (Muestra tamaño, codigo de estado, etc...)
 - -v: Mostrar información sobre lo que va realizando la petición.
+
+#### OPCIONES EXTRA
+
+- -o archivo: guardar la salida en un archivo.
+
+- -s: modo silencioso.
+
+  > no muestra barra de progreso
+
+- -L: seguir redirecciones.
+
+- -u user:pass: autenticación básica.
 
 ## 1. GET
 
