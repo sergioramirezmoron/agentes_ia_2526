@@ -1,0 +1,136 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
+      "authorId": 1,
+      "year": 2008,
+      "language": "English",
+      "genre": "Software Engineering"
+    },
+    {
+      "id": 2,
+      "title": "The Pragmatic Programmer: Your Journey To Mastery",
+      "authorId": 2,
+      "year": 1999,
+      "language": "English",
+      "genre": "Software Development"
+    },
+    {
+      "id": 3,
+      "title": "JavaScript: The Good Parts",
+      "authorId": 3,
+      "year": 2008,
+      "language": "English",
+      "genre": "Web Development"
+    },
+    {
+      "id": 4,
+      "title": "Python Crash Course",
+      "authorId": 4,
+      "year": 2015,
+      "language": "English",
+      "genre": "Python"
+    },
+    {
+      "id": 5,
+      "title": "Head First Design Patterns",
+      "authorId": 5,
+      "year": 2004,
+      "language": "English",
+      "genre": "Software Design"
+    },
+    {
+      "id": 6,
+      "title": "Eloquent JavaScript",
+      "authorId": 6,
+      "year": 2011,
+      "language": "English",
+      "genre": "Web Development"
+    },
+    {
+      "id": 7,
+      "title": "You Don't Know JS Yet: Get Started",
+      "authorId": 7,
+      "year": 2020,
+      "language": "English",
+      "genre": "JavaScript"
+    },
+    {
+      "id": 8,
+      "title": "Code Complete: A Practical Handbook of Software Construction",
+      "authorId": 8,
+      "year": 1993,
+      "language": "English",
+      "genre": "Software Engineering"
+    },
+    {
+      "id": 9,
+      "title": "The C Programming Language",
+      "authorId": 9,
+      "year": 1978,
+      "language": "English",
+      "genre": "Programming"
+    },
+    {
+      "id": 10,
+      "title": "Grokking Algorithms",
+      "authorId": 10,
+      "year": 2016,
+      "language": "English",
+      "genre": "Algorithms"
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "Robert C. Martin",
+      "country": "USA"
+    },
+    {
+      "id": 2,
+      "name": "Andrew Hunt",
+      "country": "USA"
+    },
+    {
+      "id": 3,
+      "name": "Douglas Crockford",
+      "country": "USA"
+    },
+    {
+      "id": 4,
+      "name": "Eric Matthes",
+      "country": "USA"
+    },
+    {
+      "id": 5,
+      "name": "Elisabeth Robson",
+      "country": "USA"
+    },
+    {
+      "id": 6,
+      "name": "Marijn Haverbeke",
+      "country": "Netherlands"
+    },
+    {
+      "id": 7,
+      "name": "Kyle Simpson",
+      "country": "USA"
+    },
+    {
+      "id": 8,
+      "name": "Steve McConnell",
+      "country": "USA"
+    },
+    {
+      "id": 9,
+      "name": "Dennis Ritchie",
+      "country": "USA"
+    },
+    {
+      "id": 10,
+      "name": "Aditya Bhargava",
+      "country": "USA"
+    }
+  ]
+}
