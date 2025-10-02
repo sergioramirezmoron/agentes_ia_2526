@@ -7,7 +7,10 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server:up":"sh scripts/server-up.sh",
+    "crud:curl":"sh scripts/crud:curl.sh",
+    "validate":"sh scripts/validate.sh"
   },
   "dependencies": {
     "dotenv": "^17.2.3",

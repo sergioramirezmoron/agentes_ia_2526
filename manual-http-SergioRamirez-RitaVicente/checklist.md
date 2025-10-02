@@ -8,10 +8,10 @@
   - [x] `json-server`
   - [x] `dotenv`
 - [x] Configurar `package.json` con `"type": "module"` (sergio)
-- [ ] Añadir scripts en `package.json`: (Rita)
-  - [ ] `server:up` (levantar json-server en puerto 4000)
-  - [ ] `crud:curl` (ejecutar `src/crud-curl.js`)
-  - [ ] `validate` (ejecutar `scripts/validate.sh`)
+- [x] Añadir scripts en `package.json`: (Rita)
+  - [x] `server:up` (levantar json-server en puerto 4000)
+  - [x] `crud:curl` (ejecutar `src/crud-curl.js`)
+  - [x] `validate` (ejecutar `scripts/validate.sh`)
 - [x] Crear estructura de carpetas y archivos:
   - [x] `src/db/db.json` (con students, courses, enrollments) (Sergio)
   - [x] `src/crud-curl.js` (Sergio)
