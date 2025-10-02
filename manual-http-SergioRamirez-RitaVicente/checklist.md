@@ -26,8 +26,8 @@
 
 ## 💻 Parte 2: Script CRUD (src/crud-curl.js) (Sergio)
 
-- [ ] Importar y configurar dotenv
-- [ ] Construir `BASE_URL` desde `.env`
+- [x] Importar y configurar dotenv
+- [x] Construir `BASE_URL` desde `.env`
 - [ ] Implementar funciones (con JSDoc y console.log de comandos cURL):
   - [ ] `createStudent(studentData)`
   - [ ] `readAllStudents()`
