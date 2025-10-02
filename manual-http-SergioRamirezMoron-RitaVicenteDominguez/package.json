@@ -1,0 +1,16 @@
+{
+  "name": "manual-http-sergioramirezmoron-ritavicentedominguez",
+  "version": "1.0.0",
+  "description": "Proyecto ejercicio crud con herramientas visuales",
+  "license": "ISC",
+  "author": "Sergio Ramirez y Rita Vicente",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "json-server": "^1.0.0-beta.3"
+  }
+}
