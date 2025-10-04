@@ -65,17 +65,17 @@
 
 ## 📝 Parte 5: REST Client (Sergio)
 
-- [ ] Crear `peticiones-crud.http` con variables `@baseUrl`, `@port`, `@apiUrl`
-- [ ] Implementar operaciones CRUD:
-  - [ ] CREATE Student
-  - [ ] READ All Students
-  - [ ] READ Student by ID
-  - [ ] READ Filtrar estudiantes activos
-  - [ ] READ Filtrar por nivel
-  - [ ] UPDATE Student (PUT)
-  - [ ] PATCH Student
-  - [ ] DELETE Student
-- [ ] Probar todas las peticiones desde VS Code
+- [x] Crear `peticiones-crud.http` con variables `@baseUrl`, `@port`, `@apiUrl`
+- [x] Implementar operaciones CRUD:
+  - [x] CREATE Student
+  - [x] READ All Students
+  - [x] READ Student by ID
+  - [x] READ Filtrar estudiantes activos
+  - [x] READ Filtrar por nivel
+  - [x] UPDATE Student (PUT)
+  - [x] PATCH Student
+  - [x] DELETE Student
+- [x] Probar todas las peticiones desde VS Code
 
 ## ✅ Parte 6: Script de validación (scripts/validate.sh) (Sergio)
 
