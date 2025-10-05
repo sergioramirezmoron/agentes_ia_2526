@@ -63,11 +63,11 @@ else
 fi
 
 # --- Verify images ---
-IMG_COUNT=$(find images -type f -name "*.jpg" -o -name "*.png" | wc -l)
+IMG_COUNT=$(find images -type f -name "ThunderClient*.jpg" -o -name "ThunderClient*.png" | wc -l)
 if [ "$IMG_COUNT" -ge 6 ]; then
-  echo "Found $IMG_COUNT in images/"
+  echo "CORRECT: Found $IMG_COUNT in images/"
 else
-  echo "Just found $IMG_COUNT images, required at least 6"
+  echo "ERROR: Just found $IMG_COUNT images, required at least 6"
   PASS=false
 fi
 
