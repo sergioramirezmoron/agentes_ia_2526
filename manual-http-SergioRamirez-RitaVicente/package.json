@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server:up":"sh scripts/server-up.sh",
+    "server:up": "json-server --watch src/db/db.json --port 4000",
     "crud:curl":"node src/crud-curl.js",
     "validate":"sh scripts/validate.sh"
   },
