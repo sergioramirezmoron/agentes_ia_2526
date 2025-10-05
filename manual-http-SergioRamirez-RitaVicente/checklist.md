@@ -28,14 +28,14 @@
 
 - [x] Importar y configurar dotenv
 - [x] Construir `BASE_URL` desde `.env`
-- [ ] Implementar funciones (con JSDoc y console.log de comandos cURL):
-  - [ ] `createStudent(studentData)`
-  - [ ] `readAllStudents()`
-  - [ ] `readStudentById(id)`
-  - [ ] `updateStudent(id, studentData)`
-  - [ ] `patchStudent(id, partialData)`
-  - [ ] `deleteStudent(id)`
-- [ ] Ejecutar todas las funciones en orden al final del archivo con mensajes informativos
+- [x] Implementar funciones (con JSDoc y console.log de comandos cURL):
+  - [x] `createStudent(studentData)`
+  - [x] `readAllStudents()`
+  - [x] `readStudentById(id)`
+  - [x] `updateStudent(id, studentData)`
+  - [x] `patchStudent(id, partialData)`
+  - [x] `deleteStudent(id)`
+- [x] Ejecutar todas las funciones en orden al final del archivo con mensajes informativos
 
 ## 📚 Parte 3: Documentación CRUD con cURL (README.md) (Rita)
 
@@ -65,17 +65,17 @@
 
 ## 📝 Parte 5: REST Client (Sergio)
 
-- [ ] Crear `peticiones-crud.http` con variables `@baseUrl`, `@port`, `@apiUrl`
-- [ ] Implementar operaciones CRUD:
-  - [ ] CREATE Student
-  - [ ] READ All Students
-  - [ ] READ Student by ID
-  - [ ] READ Filtrar estudiantes activos
-  - [ ] READ Filtrar por nivel
-  - [ ] UPDATE Student (PUT)
-  - [ ] PATCH Student
-  - [ ] DELETE Student
-- [ ] Probar todas las peticiones desde VS Code
+- [x] Crear `peticiones-crud.http` con variables `@baseUrl`, `@port`, `@apiUrl`
+- [x] Implementar operaciones CRUD:
+  - [x] CREATE Student
+  - [x] READ All Students
+  - [x] READ Student by ID
+  - [x] READ Filtrar estudiantes activos
+  - [x] READ Filtrar por nivel
+  - [x] UPDATE Student (PUT)
+  - [x] PATCH Student
+  - [x] DELETE Student
+- [x] Probar todas las peticiones desde VS Code
 
 ## ✅ Parte 6: Script de validación (scripts/validate.sh) (Sergio)
 
