@@ -79,11 +79,11 @@
 
 ## ✅ Parte 6: Script de validación (scripts/validate.sh) (Sergio)
 
-- [ ] Verificar existencia de todos los archivos/carpetas obligatorios
-- [ ] Verificar `package.json` (type, dependencias, scripts)
-- [ ] Verificar al menos 6 capturas en `images/`
-- [ ] Mostrar resultado final (pasado/fallado)
-- [ ] Dar permisos de ejecución y probar
+- [x] Verificar existencia de todos los archivos/carpetas obligatorios
+- [x] Verificar `package.json` (type, dependencias, scripts)
+- [x] Verificar al menos 6 capturas en `images/`
+- [x] Mostrar resultado final (pasado/fallado)
+- [x] Dar permisos de ejecución y probar
 
 ## 📋 Parte 7: Checklist de progreso (Rita)
 
