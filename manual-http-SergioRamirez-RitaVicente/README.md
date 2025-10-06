@@ -44,6 +44,9 @@ Elimina un estudiante de la base de datos indicano su ID. Devolvera un 200 OK, u
 
 # Como usar Thunder Client
 
+![ThunderClientCreatedHeader]
+![ThunderClientCreated]
+
 # REST Client
 
 ## CREATE
