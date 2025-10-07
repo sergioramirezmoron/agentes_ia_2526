@@ -50,17 +50,17 @@
 
 ## ⚡ Parte 4: Thunder Client (Rita)
 
-- [ ] Crear colección "CRUD Students API"
-- [ ] Configurar entorno de variables (baseUrl, port, fullUrl)
-- [ ] Crear peticiones:
-  - [ ] CREATE Student (POST)
-  - [ ] GET All Students (GET)
-  - [ ] GET Student by ID (GET)
-  - [ ] UPDATE Student (PUT)
-  - [ ] PATCH Student (PATCH)
+- [x] Crear colección "CRUD Students API"
+- [x] Configurar entorno de variables (baseUrl, port, fullUrl)
+- [x] Crear peticiones:
+  - [x] CREATE Student (POST)
+  - [x] GET All Students (GET)
+  - [x] GET Student by ID (GET)
+  - [x] UPDATE Student (PUT)
+  - [x] PATCH Student (PATCH)
   - [ ] DELETE Student (DELETE)
-- [ ] Capturar pantalla de cada petición mostrando request y response
-- [ ] Guardar capturas en `images/` con nombres descriptivos
+- [x] Capturar pantalla de cada petición mostrando request y response
+- [x] Guardar capturas en `images/` con nombres descriptivos
 - [ ] Incluir capturas en README con explicación
 
 ## 📝 Parte 5: REST Client (Sergio)
@@ -87,7 +87,7 @@
 
 ## 📋 Parte 7: Checklist de progreso (Rita)
 
-- [ ] Crear `checklist.md` con tareas organizadas por fases
+- [c] Crear `checklist.md` con tareas organizadas por fases
 - [ ] Incluir todas las secciones del proyecto con checkboxes
 
 ## 🌿 Parte 8: Git y GitHub (Sergio)
