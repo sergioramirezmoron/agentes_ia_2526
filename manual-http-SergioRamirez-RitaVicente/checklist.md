@@ -39,14 +39,14 @@
 
 ## 📚 Parte 3: Documentación CRUD con cURL (README.md) (Rita)
 
-- [ ] Documentar cada operación (CREATE, READ ALL, READ BY ID, UPDATE, PATCH, DELETE) con:
-  - [ ] Descripción
-  - [ ] Comando cURL
-  - [ ] Explicación flags y método HTTP
-  - [ ] Headers usados
-  - [ ] Respuesta HTTP real (headers + body)
-  - [ ] Explicación del código de estado
-- [ ] Añadir capturas de las respuestas
+- [x] Documentar cada operación (CREATE, READ ALL, READ BY ID, UPDATE, PATCH, DELETE) con:
+  - [x] Descripción
+  - [x] Comando cURL
+  - [x] Explicación flags y método HTTP
+  - [x] Headers usados
+  - [x] Respuesta HTTP real (headers + body)
+  - [x] Explicación del código de estado
+- [x] Añadir capturas de las respuestas
 
 ## ⚡ Parte 4: Thunder Client (Rita)
 
@@ -58,10 +58,10 @@
   - [x] GET Student by ID (GET)
   - [x] UPDATE Student (PUT)
   - [x] PATCH Student (PATCH)
-  - [ ] DELETE Student (DELETE)
+  - [x] DELETE Student (DELETE)
 - [x] Capturar pantalla de cada petición mostrando request y response
 - [x] Guardar capturas en `images/` con nombres descriptivos
-- [ ] Incluir capturas en README con explicación
+- [x] Incluir capturas en README con explicación
 
 ## 📝 Parte 5: REST Client (Sergio)
 
@@ -87,8 +87,8 @@
 
 ## 📋 Parte 7: Checklist de progreso (Rita)
 
-- [c] Crear `checklist.md` con tareas organizadas por fases
-- [ ] Incluir todas las secciones del proyecto con checkboxes
+- [x] Crear `checklist.md` con tareas organizadas por fases
+- [x] Incluir todas las secciones del proyecto con checkboxes
 
 ## 🌿 Parte 8: Git y GitHub (Sergio)
 
@@ -97,9 +97,5 @@
 - [x] Crear rama `main` y subir código inicial
 - [x] Crear rama `m1/http-request-response` para trabajar
 - [x] Hacer commits incrementales y descriptivos
-- [ ] Subir rama y crear Pull Request hacia main
-- [ ] PR con resumen, división del trabajo, dificultades y features completadas
 - [x] Asignar profesor como reviewer
-- [ ] Tras aprobación y merge:
-  - [ ] Actualizar rama local main
-  - [ ] Crear tag `M1/http-request-response` y subirlo
+

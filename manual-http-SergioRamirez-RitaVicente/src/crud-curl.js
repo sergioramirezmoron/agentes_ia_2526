@@ -2,7 +2,6 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const baseUrl = `${process.env.API_BASE_URL}:${process.env.PORT}/students`;
-console.log(baseUrl);
 
 /**
  * Create an student with an object
