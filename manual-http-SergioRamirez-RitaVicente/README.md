@@ -236,6 +236,8 @@ El objetivo del script es verificar que el proyecto cumple con la estructura y r
 Primero se verifica si existen los archivos y carpetas:
 
 Con la funcion check_exists recibe una ruta de archivo o carpeta como parámetro, verifica si existe (-e) y muestra un mensaje si está presente o marca un error. Con ello, aseguraremos la estructura mínima del proyecto para que este completa y evitemos errores de ruta.
+En primer lugar, despues de crear el script, debemos darle permisos.
+![Work](images/PermisosParte6.png)
 
 ```bash
 # --- Verify existence of files and folders---
@@ -333,3 +335,5 @@ else
   exit 1
 fi
 ```
+El resultado es el siguiente:
+![Validation](images/ValidacionParte6.png)
