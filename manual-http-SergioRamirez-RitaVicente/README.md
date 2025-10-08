@@ -17,6 +17,7 @@ const baseUrl = `${process.env.API_BASE_URL}:${process.env.PORT}/students`;
 ```
 
 Seguidamente, tenemos el resto del código, cada apartado con su respectiva función y en caso de ser necesario, cada uno tiene su data o su Header, con su respectivo contenido.
+Finalmente, se crea una función llamada tests para hacer funcionar todos los tests, esta funcion se le llama justo al final del script.
 
 # REST Client
 
@@ -62,6 +63,18 @@ Utilizamos el método POST porque es usado para crear un nuevo recurso dentro de
 
 `POST /students HTTP/1.1 Host: localhost:4000 Content-Type: application/json`
 
+```bash
+const createStudent = (studentData = {}) => {
+  const curl = `curl -X POST ${baseUrl} \
+  -H "Content-Type: application/json" \
+  -d '${JSON.stringify(
+    studentData
+  )}'`;
+  console.log("Create student:\n", curl);
+};
+```
+En esta función se le pasa como parametro unos datos de un estudiante, se crea el comando de curl con el método POST y en url a la api, seguidamente se le pasa un Header para que se sepa que se le va a enviar un JSON, finalmente, se le pasa el DATA con JSON.stringify para que no se le pase un Objeto, si no un String.
+
 ### Thunder Client CREATE
 
 El header Content-Type indica el formato del contenido que enviaremos al cuerpo de la petición, en esete caso pedimos JSON, así el servidor sabe como interpretar la información.
@@ -84,6 +97,15 @@ Consulta la lista completa de estudiantes almacenados en la base de datos. Usand
 
 En el headers poner Accept: application/json porque se indica que aceptamos respuestas de JSON.
 
+```bash
+const readAllStudents = () => {
+  const curl = `curl -X GET ${baseUrl}`;
+  console.log("Students:", curl);
+};
+```
+Aquí tan solo llamamos al metodo GET de la url y obtenemos todos los estudiantes.
+
+
 ### Thunder Client READ ALL
 
 ![ThunderClientReadAll](images/ThunderClientReadAllHeaders.png)
@@ -100,6 +122,13 @@ Consulta un estudiante concreto indicando su ID. Usando el método GET (Leer dat
 
 En los headers podemos poner Accept: application/json para que espere JSON
 
+```bash
+const readStudentById = (id = 1) => {
+  const curl = `curl -X GET ${baseUrl}/${id}`;
+  console.log(`Student by Id(${id}):`, curl);
+};
+```
+Llamamos al método GET y le pasamos tambien el id del usuario que queremos leer, en este caso, el usuario numero 1.
 ### Thunder Client READ BY ID
 
 ![ThunderClientReadByOk](images/ThunderClientReadByIdOk.png)
@@ -117,6 +146,17 @@ Se debe especificar el id de la URL.
 
 En los headers debemos establecer el Content-Type: application/json para que sepa como interpretar el body y Accept: application/json para que responda con un JSON
 
+```bash
+const updateStudent = (id = 1, studentData = {}) => {
+  const curl = `curl -X PUT ${baseUrl}/${id} \
+  -H "Content-Type: application/json" \
+  -d '${JSON.stringify(
+    studentData
+  )}'`;
+  console.log(`Updated Student (${id}):`, curl);
+};
+```
+Aqui se le pasa un id y un studentData como parámetro, luego con el método PUT se pasa la url y el usuario que quieremos modificar, y finalmente, añadimos el Header ara que sepa que le vamos a pasar un JSON y en el contenido le pasamos los datos de estudiante con JSON.stringify para que le llegue al navegador como String y no como Object.
 ### Thunder Client UPDATE
 
 ![ThunderClientUpdate](images/ThunderClientCreatedStudentHeaders.png)
@@ -139,6 +179,17 @@ En los headers debemos establecer el Content-Type: application/json para que sep
 
 Se debe especificar el id del estudiante en la URL
 
+```bash
+const patchStudent = (id = 1, partialData = {}) => {
+  const curl = `curl -X PATCH ${baseUrl}/${id} \
+  -H "Content-Type: application/json" \
+  -d '${JSON.stringify(
+    partialData
+  )}'`;
+  console.log(`Patched Student (${id}):`, curl);
+};
+```
+Aquí se le pasa un id de usuario y unos datos que queremos modificar, se llama al método PATCH y se le pasa el id de usuario para que se sepa cual es el que se va a modificar, se le pasa el Header de json para que se sepa que se le envia un JSON, y seguidamente en el contenido se le pasan los datos del parametro pasados a string con JSON stringify.
 ### Thunder Client Patch
 
 ![ThunderClientPatch](images/ThunderClientPathHeaders.png)
@@ -157,6 +208,14 @@ En los headers se puede poner Accept: application/json
 
 Se debe especificar el id del estudiante en la URL.
 
+```bash
+const deleteStudent = (id = 1) => {
+  const curl = `curl -X DELETE ${baseUrl}/${id}`;
+  console.log(`Deleted Student (${id}):`, curl);
+};
+```
+Se le pasa un id, seguidamente en el método a utilizar, se le pasa también el id, para que se sepa cual es el usuario que se desea eliminar.
+
 ### Thunder Client DELETE
 
 ![ThunderClientDelete](images/ThunderClientDelete.png)
@@ -164,6 +223,11 @@ Se debe especificar el id del estudiante en la URL.
 ### REST Client DELETE
 
 ![DeleteStudent](images/DeleteStudentRestClient.png)
+
+## Scrip funcionando
+![Work](images/imagen-crud-curl-js-funcionando.png)
+
+Aqui se vé que nos devuelve los comandos completos de cada función del curl solicitadas, por lo que en caso de querer usarlas, serían completamente funcionales siempre y cuando la base de datos esté activada y funcional, y que esos usuarios existan.
 
 # Script de validación
 
