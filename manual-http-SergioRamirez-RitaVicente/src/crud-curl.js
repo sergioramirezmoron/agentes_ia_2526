@@ -1,4 +1,5 @@
 import dotenv from "dotenv";
+import { exec } from "child_process";
 dotenv.config();
 
 const baseUrl = `${process.env.API_BASE_URL}:${process.env.PORT}/students`;
@@ -10,12 +11,23 @@ const baseUrl = `${process.env.API_BASE_URL}:${process.env.PORT}/students`;
  * @return - A curl command to create a new student
  */
 const createStudent = (studentData = {}) => {
-  const curl = `curl -X POST ${baseUrl} \
+  const curl = `curl -s -X POST ${baseUrl} \
   -H "Content-Type: application/json" \
-  -d '${JSON.stringify(
-    studentData
-  )}'`;
-  console.log("Create student:\n", curl);
+  -d "${JSON.stringify(studentData).replace(/"/g, '\\"')}"`;
+  exec(curl, (error, stdout, stderr) => {
+    if (error) {
+      console.error("Error ejecutando el curl -> ", error.message);
+      return;
+    }
+    if (stderr) {
+      console.error("Error de salida -> ", stderr);
+      return;
+    }
+
+    const data = JSON.parse(stdout);
+    console.log("=== CREATE ===");
+    console.log(data);
+  });
 };
 /**
  * Read all students
@@ -23,8 +35,20 @@ const createStudent = (studentData = {}) => {
  * @return - A curl command with all students
  */
 const readAllStudents = () => {
-  const curl = `curl -X GET ${baseUrl}`;
-  console.log("Students:", curl);
+  const curl = `curl -s -X GET ${baseUrl}`;
+  exec(curl, (error, stdout, stderr) => {
+    if (error) {
+      console.error("Error ejecutando el curl -> ", error.message);
+      return;
+    }
+    if (stderr) {
+      console.error("Error de salida -> ", stderr);
+      return;
+    }
+    const data = JSON.parse(stdout);
+    console.log("=== READ ALL ===");
+    console.log(data);
+  });
 };
 /**
  * Read a student with the id
@@ -33,8 +57,20 @@ const readAllStudents = () => {
  * @return - A curl command to read a student
  */
 const readStudentById = (id = 1) => {
-  const curl = `curl -X GET ${baseUrl}/${id}`;
-  console.log(`Student by Id(${id}):`, curl);
+  const curl = `curl -s -X GET ${baseUrl}/${id}`;
+  exec(curl, (error, stdout, stderr) => {
+    if (error) {
+      console.error("Error ejecutando el curl -> ", error.message);
+      return;
+    }
+    if (stderr) {
+      console.error("Error de salida -> ", stderr);
+      return;
+    }
+    const data = JSON.parse(stdout);
+    console.log("=== READ BY ID ===");
+    console.log(data);
+  });
 };
 /**
  * Update an student with an object and id
@@ -44,12 +80,23 @@ const readStudentById = (id = 1) => {
  * @return - A curl command to update a student
  */
 const updateStudent = (id = 1, studentData = {}) => {
-  const curl = `curl -X PUT ${baseUrl}/${id} \
+  const curl = `curl -s -X PUT ${baseUrl}/${id} \
   -H "Content-Type: application/json" \
-  -d '${JSON.stringify(
-    studentData
-  )}'`;
-  console.log(`Updated Student (${id}):`, curl);
+  -d "${JSON.stringify(studentData).replace(/"/g, '\\"')}"`;
+  exec(curl, (error, stdout, stderr) => {
+    if (error) {
+      console.error("Error ejecutando el curl -> ", error.message);
+      return;
+    }
+    if (stderr) {
+      console.error("Error de salida -> ", stderr);
+      return;
+    }
+
+    const data = JSON.parse(stdout);
+    console.log("=== UPDATE ===");
+    console.log(data);
+  });
 };
 /**
  * Patch a student with an object and id
@@ -59,12 +106,24 @@ const updateStudent = (id = 1, studentData = {}) => {
  * @return - A curl command to patch a student
  */
 const patchStudent = (id = 1, partialData = {}) => {
-  const curl = `curl -X PATCH ${baseUrl}/${id} \
+  const curl = `curl -s -X PATCH ${baseUrl}/${id} \
   -H "Content-Type: application/json" \
-  -d '${JSON.stringify(
-    partialData
-  )}'`;
-  console.log(`Patched Student (${id}):`, curl);
+  -d "${JSON.stringify(partialData).replace(/"/g, '\\"')}"
+`;
+  exec(curl, (error, stdout, stderr) => {
+    if (error) {
+      console.error("Error ejecutando el curl -> ", error.message);
+      return;
+    }
+    if (stderr) {
+      console.error("Error de salida -> ", stderr);
+      return;
+    }
+
+    const data = JSON.parse(stdout);
+    console.log("=== PATCH ===");
+    console.log(data);
+  });
 };
 /**
  * Delete a student with an object
@@ -73,41 +132,50 @@ const patchStudent = (id = 1, partialData = {}) => {
  * @return - A curl command to delete a student
  */
 const deleteStudent = (id = 1) => {
-  const curl = `curl -X DELETE ${baseUrl}/${id}`;
-  console.log(`Deleted Student (${id}):`, curl);
+  const curl = `curl -s -X DELETE ${baseUrl}/${id}`;
+  exec(curl, (error, stdout, stderr) => {
+    if (error) {
+      console.error("Error ejecutando el curl -> ", error.message);
+      return;
+    }
+    if (stderr) {
+      console.error("Error de salida -> ", stderr);
+      return;
+    }
+
+    const data = JSON.parse(stdout);
+    console.log("=== DELETE ===");
+    console.log(data);
+  });
 };
 
-const scripts = () => {
+const tests = () => {
   console.log("=== CRUD Students API ===\n");
-console.log("=== CREATE ===");
+
   createStudent({
     id: 8,
-      name: "Juan Cevilla",
-      email: "juanchi@email.com",
-      enrollmentDate: "2024-09-15",
-      active: true,
-      level: "begginer"
+    name: "Juan Cevilla",
+    email: "juanchi@email.com",
+    enrollmentDate: "2024-09-15",
+    active: true,
+    level: "begginer",
   });
-  console.log("=== READ ALL ===");
   readAllStudents();
-  console.log("=== READ BY ID ===");
   readStudentById(3);
-  console.log("=== UPDATE ===");
+
   updateStudent(3, {
     id: 3,
-      name: "Pedro Lunatico",
-      email: "pedrolunatico@email.com",
-      enrollmentDate: "2024-09-15",
-      active: false,
-      level: "advanced"
+    name: "Pedro Lunatico",
+    email: "pedrolunatico@email.com",
+    enrollmentDate: "2024-09-15",
+    active: false,
+    level: "advanced",
   });
-  console.log("=== PATCH ===");
-  patchStudent(4, { active: true });
-  console.log("=== DELETE ===");
-  deleteStudent(5);
 
-  console.log("=== FIN DEL SCRIPT ===");
+  patchStudent(4, { active: false });
+
+  deleteStudent(5);
 };
 
 // CODE EXECUTION
-scripts();
+tests();
