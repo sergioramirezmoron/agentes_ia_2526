@@ -1,0 +1,70 @@
+### -------------------------------------
+### VARIABLES
+### -------------------------------------
+@baseUrl = http://localhost
+@port = 4000
+@apiUrl = {{baseUrl}}:{{port}}/students
+@contentType = application/json
+
+### -------------------------------------
+### CREATE Student
+### -------------------------------------
+POST {{apiUrl}} HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+  "name": "Lucía Fernández Díaz",
+  "email": "lucia.fernandez@email.com",
+  "enrollmentDate": "2025-01-20",
+  "active": true,
+  "level": "advanced"
+}
+
+### -------------------------------------
+### READ - All students
+### -------------------------------------
+GET {{apiUrl}} HTTP/1.1
+
+### -------------------------------------
+### READ - Student by Id
+### -------------------------------------
+GET {{apiUrl}}/2 HTTP/1.1
+
+### -------------------------------------
+### READ - Filter active students
+### -------------------------------------
+GET {{apiUrl}}?active=true HTTP/1.1
+
+### -------------------------------------
+### READ - Filter by level (intermediate)
+### -------------------------------------
+GET {{apiUrl}}?level=intermediate HTTP/1.1
+
+### -------------------------------------
+### UPDATE - Update student
+### -------------------------------------
+PUT {{apiUrl}}/1 HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+  "name": "María García López",
+  "email": "maria.garcia.actualizado@email.com",
+  "enrollmentDate": "2024-09-15",
+  "active": true,
+  "level": "advanced"
+}
+
+### -------------------------------------
+### PATCH - Update field
+### -------------------------------------
+PATCH {{apiUrl}}/2 HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+  "level": "advanced"
+}
+
+### -------------------------------------
+### DELETE - Delete Student
+### -------------------------------------
+DELETE {{apiUrl}}/4 HTTP/1.1

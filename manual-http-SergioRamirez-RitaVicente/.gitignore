@@ -1,0 +1,17 @@
+# ------> Variables <-------
+.env
+
+# ------> System Files <-------
+
+Thumbs.db
+.DS_Store
+
+# ------> Dependencies <-------
+
+node_modules/
+
+# ------> build Folders <-------
+
+dist/
+
+build/

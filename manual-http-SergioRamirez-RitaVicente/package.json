@@ -1,0 +1,19 @@
+{
+  "name": "manual-http-sergioramirez-ritavicente",
+  "version": "1.0.0",
+  "description": "Actividad Hito1 sobre CRUD",
+  "license": "ISC",
+  "author": "Sergio Ramirez y Rita Vicente",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server:up": "json-server --watch ./src/db/db.json --port 4000",
+    "crud:curl":"node src/crud-curl.js",
+    "validate":"sh scripts/validate.sh"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "json-server": "^1.0.0-beta.3"
+  }
+}
